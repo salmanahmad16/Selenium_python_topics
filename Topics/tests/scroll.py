@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 
 options = Options()
 options.headless = False
-serviceObj = Service("/Topics/driver/chromedriver")
+serviceObj = Service("/Users/mac/PycharmProjects/Selenium_practice/Topics/driver/chromedriver")
 driver = webdriver.Chrome(service=serviceObj, options=options)
 
 driver.get("https://www.countries-ofthe-world.com/flags-of-the-world.html")
@@ -42,6 +42,16 @@ def scrollDownToEnd():
     driver.execute_script("window.scrollBy(0, document.body.scrollHeight)")
 
 scrollDownToEnd()
+
+
+                        #scroll up to top
+def scrollUpToTop():
+    driver.execute_script("window.scrollBy(0, -document.body.scrollHeight)")
+
+
+scrollDownToEnd()
+time.sleep(1)
+scrollUpToTop()
 
 time.sleep(3)
 driver.quit()

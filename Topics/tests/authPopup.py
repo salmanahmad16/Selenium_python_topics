@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 
 options = Options()
 options.headless = False
-serviceObj = Service("/Topics/driver/chromedriver")
+serviceObj = Service("/Users/mac/PycharmProjects/Selenium_practice/Topics/driver/chromedriver")
 driver = webdriver.Chrome(service=serviceObj, options=options)
 
 driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth")

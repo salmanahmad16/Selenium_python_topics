@@ -11,7 +11,7 @@ from selenium.webdriver.support.select import Select
 
 options = Options()
 options.headless = False
-serviceObj = Service("/Topics/driver/chromedriver")
+serviceObj = Service("/Users/mac/PycharmProjects/Selenium_practice/Topics/driver/chromedriver")
 driver = webdriver.Chrome(service=serviceObj, options=options)
 
 driver.get("https://itera-qa.azurewebsites.net/home/automation")

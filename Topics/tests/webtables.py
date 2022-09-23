@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 
-serviceObj = Service("/Topics/driver/chromedriver")
+serviceObj = Service("/Users/mac/PycharmProjects/Selenium_practice/Topics/driver/chromedriver")
 driver = webdriver.Chrome(service=serviceObj)
 
 driver.get("https://testautomationpractice.blogspot.com/")
