@@ -10,7 +10,7 @@ from selenium.webdriver.chrome.options import Options
 
 options = Options()
 options.headless = False
-serviceObj = Service("/Users/mac/PycharmProjects/Selenium_practice/DemoQA/driver/chromedriver")
+serviceObj = Service("/Topics/driver/chromedriver")
 driver = webdriver.Chrome(service=serviceObj, options=options)
 
 driver.get("https://jqueryui.com/datepicker/")
