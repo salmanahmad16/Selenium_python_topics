@@ -13,22 +13,26 @@ options.headless = False
 serviceObj = Service("/Users/mac/PycharmProjects/Selenium_practice/Topics/driver/chromedriver")
 driver = webdriver.Chrome(service=serviceObj, options=options)
 
-driver.get("https://text-compare.com/")
+driver.get("https://demoqa.com/text-box")
 
 driver.implicitly_wait(10)
 
-text_area_1 = driver.find_element(By.CSS_SELECTOR, '[name="text1"]')
-text_area_1.send_keys("Welcome")
+name = driver.find_element(By.ID, 'userName')
+name.send_keys("Welcome")
 driver.implicitly_wait(10)
-text_area_2 = driver.find_element(By.CSS_SELECTOR, '[name="text2"]')
 
 act = ActionChains(driver)
-driver.implicitly_wait(10)
-act.key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()        # Select text
 
-act.key_down(Keys.CONTROL).send_keys("c").key_up(Keys.CONTROL).perform()        # Copy text
-
+act.key_down(Keys.COMMAND).send_keys("a").key_up(Keys.COMMAND).perform()        # Select text
+time.sleep(4)
+act.key_down(Keys.COMMAND).send_keys("c").key_up(Keys.COMMAND).perform()        # Copy text
+time.sleep(4)
 act.send_keys(Keys.TAB).perform()                                   # Tab to next text area
-driver.implicitly_wait(10)
-act.key_down(Keys.CONTROL).send_keys("v").key_up(Keys.CONTROL).perform()        # Paste into next text area
+time.sleep(4)
 
+act.key_down(Keys.COMMAND).send_keys("v").key_up(Keys.COMMAND).perform()        # Paste into next text area
+
+
+
+time.sleep(4)
+driver.quit()
